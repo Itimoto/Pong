@@ -2,7 +2,7 @@
   "name": "pong",
   "version": "1.0.0",
   "description": "A fairly simple two-player game of online pong",
-  "main": "example-server.js",
+  "main": "multiplayer-server.js",
   "directories": {
     "lib": "lib"
   },

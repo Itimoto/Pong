@@ -40,7 +40,7 @@ __A__: I'll try to write a more in-depth explanation later on, but here's the ge
 
 ---
 
-## How to Implement (If you're here for the *real* Fun)
+## How to Implement Online Multiplayer (If you're here for the *real* Fun)
 First, you'll need your prerequisites:
 - Node.js, NPM, and Git need to be installed locally
 - A distinct lack of fear of a Command Line
@@ -59,9 +59,9 @@ Install the Dependencies.
 $ cd Pong
 $ npm install
 ```
-Run the Example Server.
+Run the Multiplayer Example Server.
 ```
-$ node example-server.js
+$ node multiplayer-server.js
 ```
 > *You'll need to use sudo on Unix-based OSs due to security reasons. This is not recommended, but will function for a demo*
 
@@ -72,6 +72,13 @@ $ node example-server.js
 I merged Pong with the Roomba-Roamer over at [Potato.Irish](https://github.com/Itimoto/Potato.Irish-Server). The directory structure there is similar to what's visible here, albeit with some slight tweaks.
 
 See, Pong is accessible through *both* the 'dedicated pong process' (`lib/pong/_pong-server.js`) *and* through the Roomba-Roamer process (`lib/rr/_rr-server.js`) due to a common entrypoint: `lib/pong/client-manager.js`, which can cue Pong-ready Clients into the shared Pong queue through the `pongRequested()` method — which both `_rr-server` and `_pong-server` use. Nice!
+
+---
+
+## How to Implement Local Multiplayer
+Two options: 
+1. Follow the same steps above, running `$ node local-game-server.js`
+2. Open the file `literally just pong.html` in Chrome/Firefox/Edge/etc.
 
 ---
 
