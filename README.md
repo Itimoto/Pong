@@ -44,6 +44,7 @@ __A__: I'll try to write a more in-depth explanation later on, but here's the ge
 First, you'll need your prerequisites:
 - Node.js, NPM, and Git need to be installed locally
 - A distinct lack of fear of a Command Line
+- (No SSL Certificates Necessary!)
 
 If you'd like to deploy it to a Server/VPS, you'll have a little more to do. I've written up a [Fairly-Brief guide](https://github.com/Itimoto/Potato.Irish-Server#hol-up-what-if-you-screwed-up-along-the-way-and-needed-to-reset-potatoirish-from-scratch) on the full [Potato.Irish Server Repository](https://github.com/Itimoto/Potato.Irish-Server); that ought to get you started.
 
@@ -58,3 +59,8 @@ Install the Dependencies.
 $ cd Pong
 $ npm install
 ```
+Run the Example Server.
+```
+$ node example-server.js
+```
+> *You'll need to use sudo on Unix-based OSs due to security reasons. This is not recommended, but will function for a demo*
