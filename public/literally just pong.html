@@ -1,16 +1,75 @@
 <html lang="en">
   <head>
-    <title>Roomba Roamer!</title>
+    <title>Pong!</title>
     <meta 
       name="viewport" 
       content="width=device-width, initial-scale=1.0">
 
     <meta
       name="description"
-      content="Control a Roomba over the Internet! Built with NodeJS, an Old Raspberry Pi, and a Teardrop of Sweat.">
+      content="Play Pong locally!">
 
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
-    <link rel="icon" type="image/png" href="./rr_moon.png" sizes="32x32">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+      body {
+          font-family: 'Press Start 2P', serif;
+          background-color: #0a0908;
+
+          overflow: hidden;
+      }
+
+      .center-feed-container {
+
+          height: 100%;
+          width: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: auto;
+          z-index: 0;
+
+          overflow: hidden;
+
+          position: relative;
+      }
+
+      .button-pong {
+          width: 22%;
+          height: 12%;
+
+          right: 5%;
+          bottom: 10%;
+
+          font-size: 1.3em;
+
+          border: 0px;
+          border-radius: 0px;
+          box-shadow: 0px 0px 0px 0px;
+
+          background: #202336;
+          color: #FFFFFF;
+          font-family: 'Press Start 2P', Lato, sans-serif;
+
+          transition: all 1s ease-in;
+
+          position: absolute;
+      }
+
+      @media only screen and (orientation: landscape) {
+          .button-pong {  /* See: pong.css */
+              width: 13%;
+              height: 7%;
+
+              bottom: 5%;
+              right: initial;
+
+              font-size: initial;
+          }
+      }
+
+    </style>
   </head>
   <body>
 
@@ -111,7 +170,7 @@
             y : canvas.height / 2,
             radius  : canvas.height / 50, 
 
-            xVel  : 1 - (2*Math.round(Math.random())),  //-2 to 2, inclusive (Take a random number between 0-1, subtract if 1, do nothing if 0) (to determine dir)
+            xVel  : 2 - (4*Math.round(Math.random())),  //-2 to 2, inclusive (Take a random number between 0-1, subtract if 1, do nothing if 0) (to determine dir)
             yVel  : 0,
           };
           this.leftGoal = {
@@ -132,8 +191,8 @@
           this.player1 = {
             x: 0 + this.leftGoal.width + canvas.height/20, 
               y: 0 + (this.canvas.height/2 - canvas.height/6),  // Halfway down, offset to middle of the paddle
-            width : canvas.height / 30, 
-            height: canvas.height / 3,
+            width : canvas.height / 45, 
+            height: canvas.height / 6,
             color : "white",
 
             vel : 0,
@@ -218,11 +277,11 @@
               this.player1.y = this.canvas.height/2 - this.player1.height/2;
               this.player2.y = this.player1.y;
               this.player1.pts = this.player2.pts = 0;
-              ballObj.xVel = 1 - (2*Math.round(Math.random()));
+              ballObj.xVel = 2 - (4*Math.round(Math.random()));
             }, 2000);
           } else {
             setTimeout(() => {
-              ballObj.xVel = 1 - (2*Math.round(Math.random()));
+              ballObj.xVel = 2 - (4*Math.round(Math.random()));
             }, 700);
           }
         }
