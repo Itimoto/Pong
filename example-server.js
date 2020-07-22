@@ -3,7 +3,7 @@ const express       = require("express");
 const path          = require("path");
 const WebSocket     = require("ws");
 
-const PongManager = require('./pong/client-manager');
+const PongManager = require('./lib/pong/client-manager');
 
 // Set up Express Server
 
@@ -11,6 +11,7 @@ const PONGFILE = path.join(__dirname + "/public", "pong.html");
 
 var app = express();
 
+// Serve our Pong JS files
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
