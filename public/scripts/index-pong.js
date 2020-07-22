@@ -4,7 +4,7 @@ import PongClient from './pong/pongGame-client.js';
 // Prepare Server Communication
 
 //var pongURL = "ws://" + document.location.hostname + ":8084"; // Watch, children, how 'document.location.hostname' only gives the /hostname/ (i.e. sorta the ip)
-var pongURL = `ws://${document.location.hostname}/pong`;
+var pongURL = `ws://${document.location.hostname}:8082`;
 var pongWS = new WebSocket(pongURL);
 
 //-------------------------------------------------------------
@@ -33,32 +33,8 @@ window.onload = (event) => {
                 pongClient = new PongClient(pongCanvas, pongWS, {mobile: isMobileTablet()});
             });
         }
-    });  
-
-    //let btn_back = new BackButton(document.getElementById('button-back'));
-    //btn_back.backButton.style.opacity = 0.3;
-    let btn_menu = new MenuButton(document.getElementsByClassName('button-pong')[0], '/articles/pong-landing', {showImmediately: true});
-    btn_menu.button.style.opacity = 0.3;
-
-    /* // Uncomment if /just/ single-script.
-    let backButton = document.getElementsByClassName('button-pong')[0];
-    backButton.style.opacity = 0.3;
-    backButton.onclick = () => {
-        // Fade out...
-        applyToAllChildren(document.body, (elem) => {
-            elem.style.transition = "all 0.3s";
-            elem.style.opacity = 0;
-        });
-
-        // ...then move back.
-        backButton.addEventListener('transitionend', () => {
-            window.history.back();
-        }, {once: true});
-    }
-    */
+    });
 };
-
-/* //Uncomment this if you /just/ want to run the Client with this single JS file.
 
 // https://medium.com/simplejs/detect-the-users-device-type-with-a-simple-javascript-check-4fc656b735e1
 // Mobile Interface Check:
@@ -70,34 +46,3 @@ function isMobileTablet(){
     })(navigator.userAgent||navigator.vendor||window.opera);
     return check;
 }
-
-function applyToAllChildren(parentElem, callback, index){
-    if(index == undefined){   // Remember, 0 == false
-      index = parentElem.children.length - 1;
-    }
-
-    // Base Case ['parent' w/o children] (or) Endpt [final child]
-    if(index == 0){
-      let currChild = parentElem.children[0];
-      if(currChild.children.length > 0)             // Yes, it's a tad repetitive; however, it won't crash. hopefully.
-        applyToAllChildren(parentElem.children[0], callback);
-
-      callback(parentElem.children[0]);
-
-      return;
-    }
-
-    if(parentElem.children.length > 0){
-      let currChild = parentElem.children[index];
-      if(currChild.children.length > 0){
-        applyToAllChildren(currChild, callback);  // Apply to children's-children
-      }
-      
-      // Either all children's-children Applied-to, or Final Childless-Child:
-      callback(parentElem.children[index]);               // Apply, then traverse
-      applyToAllChildren(parentElem, callback, index - 1);
-      return;
-    }
-}
-
-*/

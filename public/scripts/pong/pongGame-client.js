@@ -1,4 +1,4 @@
-import initGameConstants from './generatePongConstants.js';
+import initGameConstants from './assets/generateAssets.js';
 import Renderer from './renderer.js';
 import Button from '../general/canvasButton.js';
 

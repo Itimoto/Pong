@@ -2,6 +2,9 @@
 
 body {
     font-family: 'Press Start 2P', serif;
+    background-color: #0a0908;
+
+    overflow: hidden;
 }
 
 .center-feed-container {
