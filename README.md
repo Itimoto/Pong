@@ -69,7 +69,7 @@ $ node multiplayer-server.js
 
 *"But wait!"*, you might ask, *"What if I want to incorporate it into an existing project?"*
 
-I merged Pong with the Roomba-Roamer over at [Potato.Irish](https://github.com/Itimoto/Potato.Irish-Server). The directory structure there is similar to what's visible here, albeit with some slight tweaks.
+I merged Pong with the [Roomba-Roamer](https://github.com/Itimoto/Roomba-Roamer) over at [Potato.Irish](https://github.com/Itimoto/Potato.Irish-Server). The directory structure there is similar to what's visible here, albeit with some slight tweaks.
 
 See, Pong is accessible through *both* the 'dedicated pong process' (`lib/pong/_pong-server.js`) *and* through the Roomba-Roamer process (`lib/rr/_rr-server.js`) due to a common entrypoint: `lib/pong/client-manager.js`, which can cue Pong-ready Clients into the shared Pong queue through the `pongRequested()` method — which both `_rr-server` and `_pong-server` use. Nice!
 
