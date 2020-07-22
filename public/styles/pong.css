@@ -4,6 +4,22 @@ body {
     font-family: 'Press Start 2P', serif;
 }
 
+.center-feed-container {
+
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    z-index: 0;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
 .button-pong {
     width: 22%;
     height: 12%;

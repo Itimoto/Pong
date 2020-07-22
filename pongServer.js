@@ -2,27 +2,25 @@ const http          = require("http");
 const express       = require("express");
 const path          = require("path");
 const WebSocket     = require("ws");
-const WebSocketServer  = WebSocket.Server;
 
-const PongManager = require('./lib/pong/client-manager');
+const PongManager = require('./pong/client-manager');
 
 // Set up Express Server
 
-const INDEX = path.join(__dirname + "/public", "indexPongTest.html");
+const PONGFILE = path.join(__dirname + "/public", "pong.html");
 
 var app = express();
-//public website
+
 app.use(express.static(__dirname + '/public'));
 
-app.get('/pong', function (req, res) {
-    res.sendFile(INDEX);
+app.get('/', function (req, res) {
+    res.sendFile(PONGFILE);
 });
 
 const server = http.createServer(app);
 
-
 // Create WS Server for Pong
-var commWSS = new WebSocketServer({ port: 8082 });
+const commWSS = new WebSocket.Server({ port: 8082 });
 
 commWSS.on('connection', (socket) => {
     console.log("New Connection");
