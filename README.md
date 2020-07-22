@@ -41,3 +41,20 @@ __A__: I'll try to write a more in-depth explanation later on, but here's the ge
 ---
 
 ## How to Implement (If you're here for the *real* fun)
+First, you'll need your prerequisites:
+- Node.js, NPM, and Git need to be installed locally
+- A distinct lack of fear of a Command Line
+
+If you'd like to deploy it to a Server/VPS, you'll have a little more to do. I've written up a [Fairly-Brief guide](https://github.com/Itimoto/Potato.Irish-Server#hol-up-what-if-you-screwed-up-along-the-way-and-needed-to-reset-potatoirish-from-scratch) on the full [Potato.Irish Server Repository](https://github.com/Itimoto/Potato.Irish-Server); that ought to get you started.
+
+Got it? Great.
+
+Clone into the Repository from the location of your choice.
+```
+$ git clone https://github.com/Itimoto/Pong
+```
+Install the Dependencies.
+```
+$ cd Pong
+$ npm install
+```
