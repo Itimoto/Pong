@@ -10,9 +10,7 @@ A fairly simple, online two-player game of Pong.
 
 > Currently running over on [potato.irish](https://famine.potato.irish/pong)
 
----
-
-## How to *Pong*
+## How to *Pong* (If you're here for the Fun)
 ### Q: What does the stuff on the Start Manu mean?
 __A:__
 > `PlayerX: Queueing` -- I couldn't pair you up with someone at the moment. You'll need to wait until someone else joins in.
@@ -39,3 +37,7 @@ __A__: I'll try to write a more in-depth explanation later on, but here's the ge
 > `4` Then, when you hit `Start`, two things happen: 1) You tell the Server that you're ready. 2) You tell the Server the dimensions of your screen.
 > `5` The Server comes up with an Aspect Ratio that fits both *your screen* and your *partner's*, then starts simulating the game, serverside.
 > `6` At this point, the Server sends a copy of the Game's State to both of you *every 30ms*, and listens for your keyboard/screen input to update it accordingly.
+
+---
+
+## How to Implement (If you're here for the *real* fun)
