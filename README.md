@@ -40,7 +40,7 @@ __A__: I'll try to write a more in-depth explanation later on, but here's the ge
 
 ---
 
-## How to Implement (If you're here for the *real* fun)
+## How to Implement (If you're here for the *real* Fun)
 First, you'll need your prerequisites:
 - Node.js, NPM, and Git need to be installed locally
 - A distinct lack of fear of a Command Line
@@ -64,3 +64,8 @@ Run the Example Server.
 $ node example-server.js
 ```
 > *You'll need to use sudo on Unix-based OSs due to security reasons. This is not recommended, but will function for a demo*
+
+---
+
+## Credit Where Credit Is Due
+Though Pong was made *(virtually)* from scratch, a good chunk of inspiration came from [Victor Zhou's *How to Build a (.io) Web Game* Series](https://victorzhou.com/blog/build-an-io-game-part-1/). In particular, the section on [frame interpolation](https://victorzhou.com/blog/build-an-io-game-part-1/#7-client-state)
