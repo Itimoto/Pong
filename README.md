@@ -82,5 +82,19 @@ Two options:
 
 ---
 
+## Commentary
+Originally written as an extension of the Roomba Roamer, the standalone-game is a semi-featured Online Multiplayer game of Pong.
+I figured I'd make the game a bit more... modular. I wrote it almost like a Package, but not *quite*. It's still fairly simple to implement into other projects, and, well, fairly fun, no?
+
+#### Challenges
+- The web-infrastructure was the easy part -- I already had a server, websockets, etc. set up from the Roomba Roamer. All that was really left was to *build* it. And... well...
+- *Latency* was the primary issue. Or, really, the fact that the Net's pretty inconsistent. That's were Frame-Interpolation came in play, smoothing everything out, as well as streamlining server-sent Game Updates.
+- Other issues included:
+  - Cross-Platform Support. 
+    - Pong's able to adapt to different screens, allowing windows with more narrow aspect ratios to play fairly-normally with the wide, and Phones with Desktops.
+  - Modular Infrastructure
+
+---
+
 ## Credit Where Credit Is Due
 Though Pong was made *(virtually)* from scratch, a good chunk of inspiration came from [Victor Zhou's *How to Build a (.io) Web Game* Series](https://victorzhou.com/blog/build-an-io-game-part-1/). In particular, the section on [frame interpolation](https://victorzhou.com/blog/build-an-io-game-part-1/#7-client-state)
