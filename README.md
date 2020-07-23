@@ -97,4 +97,4 @@ I figured I'd make the game a bit more... modular. I wrote it almost like a Pack
 ---
 
 ## Credit Where Credit Is Due
-Though Pong was made *(virtually)* from scratch, a good chunk of inspiration came from [Victor Zhou's *How to Build a (.io) Web Game* Series](https://victorzhou.com/blog/build-an-io-game-part-1/). In particular, the section on [frame interpolation](https://victorzhou.com/blog/build-an-io-game-part-1/#7-client-state)
+Though Pong was made *(virtually)* from scratch, a good chunk of inspiration came from __[@Victor Zhou's](https://github.com/vzhou842)__ [*How to Build a (.io) Web Game* Series](https://victorzhou.com/blog/build-an-io-game-part-1/). In particular, the section on [frame interpolation](https://victorzhou.com/blog/build-an-io-game-part-1/#7-client-state)
